@@ -1,21 +1,21 @@
-# tcycled.app
+# tcycled.de
 
 The tcycled website: old clothes back by post, with a voucher. Sorted by Artus in Bad Oldesloe.
-German is the default (`/`), English is at `/en.html`.
+German is the default (`/`), English is at `/en.html`. tcycled.app forwards to tcycled.de.
 
 | Folder | What it is |
 | --- | --- |
-| `docs/` | The live site. GitHub Pages publishes this folder at tcycled.app. Don't edit it by hand: it is rebuilt from `source/`. |
+| `docs/` | The live site. GitHub Pages publishes this folder at tcycled.de. Don't edit it by hand: it is rebuilt from `source/`. |
 | `source/` | The editable site: pages, German text, styles, script, images, fonts and the build script. |
 
 ## Going live (once)
 
-1. **Domain.** Register `tcycled.app` (and ideally `tcycled.de`, forwarded to tcycled.app).
-2. **DNS** at the registrar, for `tcycled.app`:
-   - four `A` records: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - `www` as a `CNAME` to `officegemfi-ai.github.io`
+1. **DNS for tcycled.de** at Namecheap (Domain List → Manage → Advanced DNS). Delete the parking records, then add:
+   - four `A` records with host `@`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+   - a `CNAME` record with host `www` and value `officegemfi-ai.github.io`
+2. **tcycled.app** at Namecheap: a permanent (301) redirect to `https://tcycled.de`.
 3. **GitHub Pages.** In this repo: Settings → Pages → Build and deployment → *Deploy from a branch*, branch `main`, folder `/docs`.
-   The custom domain `tcycled.app` is set by `docs/CNAME`. Once the DNS check passes, tick **Enforce HTTPS** (`.app` domains only work over HTTPS).
+   The custom domain `tcycled.de` is set by `docs/CNAME`. Once the DNS check passes, tick **Enforce HTTPS**.
 
 ## Changing the site
 
@@ -31,19 +31,19 @@ Every promise or number on the site is in the claims register (`tcycled-claims-r
 
 ## Analytics (Plausible, no cookies)
 
-1. Create the site `tcycled.app` in Plausible.
+1. Create the site `tcycled.de` in Plausible.
 2. Save Plausible's snippet to a file. In its `plausible.init`, add `hashBasedRouting: true` and `customProperties: () => window.__tcProps()`.
 3. Build with `TC_ANALYTICS_SNIPPET=path/to/snippet.html python3 source/build.py`.
 4. In Plausible, add the goals `Register start`, `Bag registered`, `App store click`, `Letter saved`, `Pilot requested` and `Asset copied`, and the properties `page, lang, headline, placement, channel, store, via, how, piece, start, asset`.
-5. Test it: open `tcycled.app/?q=hh-jeans&debug=analytics` and tap "Beutel registrieren". The event shows in the browser console.
+5. Test it: open `tcycled.de/?q=hh-jeans&debug=analytics` and tap "Beutel registrieren". The event shows in the browser console.
 
 ## Links the site understands
 
 | Link | What it does |
 | --- | --- |
-| `tcycled.app/b/<bag code>` | The QR code on every bag cap: opens registration with the code filled in |
-| `tcycled.app/?q=<placement>` | Which poster, screen or ad a visit came from (codes in `source/placements.csv`) |
-| `tcycled.app/radio` | The radio spot's spoken link |
+| `tcycled.de/b/<bag code>` | The QR code on every bag cap: opens registration with the code filled in |
+| `tcycled.de/?q=<placement>` | Which poster, screen or ad a visit came from (codes in `source/placements.csv`) |
+| `tcycled.de/radio` | The radio spot's spoken link |
 | `?h=a` or `?h=b` | Headline A "Kein Abschied." or B "Wohin mit alten Klamotten? Ab in den Beutel." (the paid test) |
 | `?lang=de` or `?lang=en` | Language |
 

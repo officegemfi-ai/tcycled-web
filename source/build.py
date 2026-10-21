@@ -86,7 +86,7 @@ MARK_LINE = ('<path pathLength="1" d="M43.5 30 L43.5 79 A6.5 6.5 0 0 0 50 85.5 A
 # QR and barcode paths
 qr = {}
 # the cap's QR is a web link: a phone camera opens registration without the app, the app opens it as a universal link
-for key, text in [('bag', 'https://tcycled.app/b/4F7K2M9QH8TA'), ('app', 'https://tcycled.app/?q=site'), ('box', 'DHL RETOURE PLACEHOLDER BX7Q-4M2K-T9HD')]:
+for key, text in [('bag', 'https://tcycled.de/b/4F7K2M9QH8TA'), ('app', 'https://tcycled.de/?q=site'), ('box', 'DHL RETOURE PLACEHOLDER BX7Q-4M2K-T9HD')]:
     qr[key] = qr_path(text)
 bar_lines = (HERE / 'bar_hm10.txt').read_text().split('\n')
 bar_n, bar_d = int(bar_lines[0]), bar_lines[1]
@@ -143,13 +143,13 @@ de_file = SRC / 'i18n' / 'de.json'
 DE = json.loads(de_file.read_text()) if de_file.exists() else {}
 i18n_js = ('window.__TC_DE = ' + json.dumps(DE, ensure_ascii=False).replace('</', '<\\/') + ';\n'
            + 'window.__TC_PLACEMENTS = ' + json.dumps(PLACEMENTS, ensure_ascii=False) + ';')
-html = ('<title>tcycled.app</title>\n<meta name="description" content="Put your old clothes in the tcycled bag, scan the cap and send the bag back with your next return. Your voucher comes at the carrier\'s first scan. Sorted by Artus in Bad Oldesloe.">\n'
+html = ('<title>tcycled.de</title>\n<meta name="description" content="Put your old clothes in the tcycled bag, scan the cap and send the bag back with your next return. Your voucher comes at the carrier\'s first scan. Sorted by Artus in Bad Oldesloe.">\n'
         + analytics + fonts + '\n<style>\n' + font_css + '\n' + css + '\n</style>\n' + sprite + '\n' + body + '\n<script>\n' + i18n_js + '\n</script>\n<script>\n' + js + '\n</script>\n')
 out = DIST / 'index.html'
 out.write_text(html)
 print(out, round(len(html.encode()) / 1024, 1), 'KB', len(used_icons), 'icons')
 
-# the hosted build: the live site in ../docs, which GitHub Pages serves at tcycled.app (dist/index.html above is the
+# the hosted build: the live site in ../docs, which GitHub Pages serves at tcycled.de (dist/index.html above is the
 # single-page preview without a document wrapper)
 import shutil
 HOST = HERE.parent / 'docs'
@@ -165,7 +165,7 @@ if (HERE / 'app.html').exists():
 # English flash first and search engines index the German text. English lives next to it as en.html.
 sys.path.insert(0, str(HERE))
 from pretranslate import to_german  # noqa: E402
-ORIGIN = 'https://tcycled.app/'
+ORIGIN = 'https://tcycled.de/'
 ALT = ('<link rel="alternate" hreflang="de" href="' + ORIGIN + '">\n<link rel="alternate" hreflang="en" href="' + ORIGIN + 'en.html">\n'
        '<link rel="alternate" hreflang="x-default" href="' + ORIGIN + '">\n')
 META = {
@@ -183,7 +183,7 @@ for lg, fname in [('de', 'index.html'), ('en', 'en.html')]:
         markup = markup.replace('data-lang="en"', 'data-lang="de"')
         markup = re.sub(r'<img src="([^"]+)" data-src-de="([^"]+)"', r'<img src="\2" data-src-de="\2" data-src-en="\1"', markup)
     title, desc = META[lg]
-    head = (html[:style_end].replace('<title>tcycled.app</title>', '<title>' + title + '</title>')
+    head = (html[:style_end].replace('<title>tcycled.de</title>', '<title>' + title + '</title>')
             .replace(re.search(r'<meta name="description" content="[^"]*">', html).group(0), '<meta name="description" content="' + desc.replace('"', '&quot;') + '">'))
     canon = '<link rel="canonical" href="' + ORIGIN + ('' if lg == 'de' else 'en.html') + '">\n'
     canon += '<link rel="icon" href="favicon.svg" type="image/svg+xml">\n<link rel="icon" href="favicon.ico" sizes="32x32">\n<link rel="apple-touch-icon" href="apple-touch-icon.png">\n'
@@ -207,6 +207,6 @@ else if ((m = p.match(/^\\/q\\/([a-z0-9-]{1,32})$/))) location.replace('/?q=' + 
 else location.replace('/');
 </script>
 """)
-(HOST / 'CNAME').write_text('tcycled.app\n')  # the custom domain for GitHub Pages
+(HOST / 'CNAME').write_text('tcycled.de\n')  # the custom domain for GitHub Pages
 (HOST / '.nojekyll').write_text('')  # serve the files as they are, _redirects included
 print(HOST, 'written')

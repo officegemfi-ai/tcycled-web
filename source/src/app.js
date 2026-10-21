@@ -1354,7 +1354,7 @@
   // the paid headline test: ?h=b shows the plain headline, anything else the campaign line
   if (visit.variant === 'b') $$('[data-hv]').forEach((h) => { h.hidden = h.dataset.hv !== 'b'; });
   setLang(startLang);
-  // a phone camera on the bag's cap opens tcycled.app/b/<code>, which redirects here as ?b=<code>
+  // a phone camera on the bag's cap opens tcycled.de/b/<code>, which redirects here as ?b=<code>
   if (qs.get('b') && openRegister(qs.get('b'), 'cap')) {
     if (!visit.placement) { visit.placement = 'cap'; visit.channel = 'bag'; }
     if (location.hash !== '#register') { try { history.replaceState(null, '', location.pathname + location.search + '#register'); } catch (e) { location.hash = 'register'; } }

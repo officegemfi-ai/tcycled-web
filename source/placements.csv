@@ -1,22 +1,22 @@
 code,channel,format,motif,where,link
-hh-sneakers,ooh,City light poster 1185 x 1750 mm,sneakers,Hamburg Hbf (example site),https://tcycled.app/?q=hh-sneakers
-hh-jeans,ooh,City light poster 1185 x 1750 mm,jeans,Hamburg Hbf (example site),https://tcycled.app/?q=hh-jeans
-hh-dress,ooh,City light poster 1185 x 1750 mm,dress,Hamburg Jungfernstieg (example site),https://tcycled.app/?q=hh-dress
-hh-hoodie,ooh,City light poster 1185 x 1750 mm,hoodie,Hamburg Jungfernstieg (example site),https://tcycled.app/?q=hh-hoodie
-hl-jeans,ooh,City light poster 1185 x 1750 mm,jeans,Lübeck Hbf (example site),https://tcycled.app/?q=hl-jeans
-hl-hoodie,ooh,City light poster 1185 x 1750 mm,hoodie,Lübeck ZOB (example site),https://tcycled.app/?q=hl-hoodie
-od-sneakers,ooh,City light poster 1185 x 1750 mm,sneakers,Bad Oldesloe station (example site),https://tcycled.app/?q=od-sneakers
-od-dress,ooh,City light poster 1185 x 1750 mm,dress,Bad Oldesloe station (example site),https://tcycled.app/?q=od-dress
-dooh-hh,dooh,Digital billboard 3:1,old jeans,Hamburg station screens (example network),https://tcycled.app/?q=dooh-hh
-dooh-hl,dooh,Digital billboard 3:1,old jeans,Lübeck station screens (example network),https://tcycled.app/?q=dooh-hl
-st-01,store,A1 store poster,jeans,Partner store 1 (to be named),https://tcycled.app/?q=st-01
-st-02,store,A1 store poster,hoodie,Partner store 2 (to be named),https://tcycled.app/?q=st-02
-st-03,store,A1 store poster,sneakers,Partner store 3 (to be named),https://tcycled.app/?q=st-03
-radio,radio,20-second spot,,Radio in Hamburg and Schleswig-Holstein (example),https://tcycled.app/radio
-meta-story,paid_social,Story ad 9:16,story,Instagram and Facebook Stories,https://tcycled.app/?utm_source=meta&utm_medium=paid_social&utm_campaign=kein-abschied&utm_content=story&lang=de
-meta-feed-letter,paid_social,Feed post 4:5,letter,Instagram and Facebook feed,https://tcycled.app/?utm_source=meta&utm_medium=paid_social&utm_campaign=kein-abschied&utm_content=feed-letter&lang=de
-meta-feed-steps,paid_social,Feed post 4:5,steps,Instagram and Facebook feed,https://tcycled.app/?utm_source=meta&utm_medium=paid_social&utm_campaign=kein-abschied&utm_content=feed-steps&lang=de
-meta-feed-voucher,paid_social,Feed post 4:5,voucher,Instagram and Facebook feed,https://tcycled.app/?utm_source=meta&utm_medium=paid_social&utm_campaign=kein-abschied&utm_content=feed-voucher&lang=de
-test-a,paid_social,Headline split test,A: Kein Abschied.,Meta A/B test,https://tcycled.app/?utm_source=meta&utm_medium=paid_social&utm_campaign=headline-test&utm_content=headline-a&h=a&lang=de
-test-b,paid_social,Headline split test,B: Wohin mit alten Klamotten?,Meta A/B test,https://tcycled.app/?utm_source=meta&utm_medium=paid_social&utm_campaign=headline-test&utm_content=headline-b&h=b&lang=de
-cap,bag,QR code on every bag's cap,,Every tcycled bag,https://tcycled.app/b/<bag code>
+hh-sneakers,ooh,City light poster 1185 x 1750 mm,sneakers,Hamburg Hbf (example site),https://tcycled.de/?q=hh-sneakers
+hh-jeans,ooh,City light poster 1185 x 1750 mm,jeans,Hamburg Hbf (example site),https://tcycled.de/?q=hh-jeans
+hh-dress,ooh,City light poster 1185 x 1750 mm,dress,Hamburg Jungfernstieg (example site),https://tcycled.de/?q=hh-dress
+hh-hoodie,ooh,City light poster 1185 x 1750 mm,hoodie,Hamburg Jungfernstieg (example site),https://tcycled.de/?q=hh-hoodie
+hl-jeans,ooh,City light poster 1185 x 1750 mm,jeans,Lübeck Hbf (example site),https://tcycled.de/?q=hl-jeans
+hl-hoodie,ooh,City light poster 1185 x 1750 mm,hoodie,Lübeck ZOB (example site),https://tcycled.de/?q=hl-hoodie
+od-sneakers,ooh,City light poster 1185 x 1750 mm,sneakers,Bad Oldesloe station (example site),https://tcycled.de/?q=od-sneakers
+od-dress,ooh,City light poster 1185 x 1750 mm,dress,Bad Oldesloe station (example site),https://tcycled.de/?q=od-dress
+dooh-hh,dooh,Digital billboard 3:1,old jeans,Hamburg station screens (example network),https://tcycled.de/?q=dooh-hh
+dooh-hl,dooh,Digital billboard 3:1,old jeans,Lübeck station screens (example network),https://tcycled.de/?q=dooh-hl
+st-01,store,A1 store poster,jeans,Partner store 1 (to be named),https://tcycled.de/?q=st-01
+st-02,store,A1 store poster,hoodie,Partner store 2 (to be named),https://tcycled.de/?q=st-02
+st-03,store,A1 store poster,sneakers,Partner store 3 (to be named),https://tcycled.de/?q=st-03
+radio,radio,20-second spot,,Radio in Hamburg and Schleswig-Holstein (example),https://tcycled.de/radio
+meta-story,paid_social,Story ad 9:16,story,Instagram and Facebook Stories,https://tcycled.de/?utm_source=meta&utm_medium=paid_social&utm_campaign=kein-abschied&utm_content=story&lang=de
+meta-feed-letter,paid_social,Feed post 4:5,letter,Instagram and Facebook feed,https://tcycled.de/?utm_source=meta&utm_medium=paid_social&utm_campaign=kein-abschied&utm_content=feed-letter&lang=de
+meta-feed-steps,paid_social,Feed post 4:5,steps,Instagram and Facebook feed,https://tcycled.de/?utm_source=meta&utm_medium=paid_social&utm_campaign=kein-abschied&utm_content=feed-steps&lang=de
+meta-feed-voucher,paid_social,Feed post 4:5,voucher,Instagram and Facebook feed,https://tcycled.de/?utm_source=meta&utm_medium=paid_social&utm_campaign=kein-abschied&utm_content=feed-voucher&lang=de
+test-a,paid_social,Headline split test,A: Kein Abschied.,Meta A/B test,https://tcycled.de/?utm_source=meta&utm_medium=paid_social&utm_campaign=headline-test&utm_content=headline-a&h=a&lang=de
+test-b,paid_social,Headline split test,B: Wohin mit alten Klamotten?,Meta A/B test,https://tcycled.de/?utm_source=meta&utm_medium=paid_social&utm_campaign=headline-test&utm_content=headline-b&h=b&lang=de
+cap,bag,QR code on every bag's cap,,Every tcycled bag,https://tcycled.de/b/<bag code>
