@@ -1,0 +1,105 @@
+<section class="page" id="page-app" data-route="app" data-title="The app" aria-label="The app" hidden>
+
+  <div class="ph" id="get">
+    <canvas class="living" data-kind="loop" data-place="soft" aria-hidden="true"></canvas>
+    <div class="wrap appgrid">
+      <div>
+        <span class="eyebrow">The app</span>
+        <h1 class="t-d1">One app for every goodbye.</h1>
+        <p class="t-lead">Scan bags, follow returns, keep vouchers and see how everything we sort is split. Free on iPhone and Android, in English and German.</p>
+        <div class="stores">
+          <button class="storebtn" type="button" data-soon data-track="App store click" data-track-store="ios">{{i:arrow-square-out}}<span><small>Download on the</small><b>App Store</b></span></button>
+          <button class="storebtn" type="button" data-soon data-track="App store click" data-track-store="android">{{i:arrow-square-out}}<span><small>Get it on</small><b>Google Play</b></span></button>
+          <div class="qrcard">{{qr:app}}<span>Point your camera here<br>to get the app.</span></div>
+        </div>
+      </div>
+      <div class="phones">
+        <div class="phone"><img src="assets/app-scan.webp" alt="Scan screen aiming at the code on a bag's cap" loading="lazy" width="390" height="844"></div>
+        <div class="phone"><img src="assets/app-wallet.webp" alt="Wallet with vouchers from partner shops" loading="lazy" width="390" height="844"></div>
+        <div class="phone"><img src="assets/app-useofgoods.webp" alt="How everything Artus sorts is split, by weight" loading="lazy" width="390" height="844"></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="sec band-ever" id="try" aria-labelledby="try-h">
+    <div class="wrap tryapp">
+      <div class="tryapp__text">
+        <h2 class="t-d2" id="try-h">Try it right here.</h2>
+        <p class="t-lead lead-gap">This is the real app design, and it's clickable. Tap the tabs, open a voucher, follow a bag. Or jump straight to a screen.</p>
+        <div class="tryapp__jump" role="group" aria-label="Jump to a screen">
+          <button class="chip" type="button" data-go="Main" data-go-de="WelcomeDE">Welcome</button>
+          <button class="chip" type="button" data-go="Home" data-go-de="HomeDE">Home</button>
+          <button class="chip" type="button" data-go="Scan">Scan a bag</button>
+          <button class="chip" type="button" data-go="VoucherArrived">Voucher ready</button>
+          <button class="chip" type="button" data-go="GetBag">Get a bag</button>
+          <button class="chip" type="button" data-go="UseOfGoods">Where it went</button>
+        </div>
+        <p class="tryapp__now" aria-live="polite"><span>Now showing</span> <b class="tryapp__screen" translate="no">Home</b></p>
+        <p class="t-small tryapp__note">Sample data, with placeholder partner names. Water and CO₂e only appear once their source has been checked. The app screens are in English; Welcome and Home also come in German.</p>
+      </div>
+      <div class="tryapp__device">
+        <div class="phone phone--live"><iframe class="tryapp__frame" title="Clickable tcycled app" data-src="app.html"></iframe></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="screens" aria-labelledby="screens-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="t-d2" id="screens-h">Have a look around.</h2>
+        <div class="row tour-bar"><p class="t-lead">The screens you'll use most, with sample data. Swipe, or use the arrows.</p>
+          <div class="tour-nav"><button type="button" data-tour="-1" aria-label="Previous screens">{{i:caret-left}}</button><button type="button" data-tour="1" aria-label="Next screens">{{i:caret-right}}</button></div>
+        </div>
+      </div>
+      <div class="tour" tabindex="0" role="region" aria-label="App screens">
+        <figure><div class="phone"><img src="assets/app-home.webp" data-src-de="assets/app-homede.webp" alt="" loading="lazy" width="390" height="844"></div><figcaption><b>Home</b><span>Your bags, Loops and vouchers at a glance.</span></figcaption></figure>
+        <figure><div class="phone"><img src="assets/app-scan.webp" alt="" loading="lazy" width="390" height="844"></div><figcaption><b>Scan</b><span>Point at the cap. That's it.</span></figcaption></figure>
+        <figure><div class="phone"><img src="assets/app-returndetail.webp" alt="" loading="lazy" width="390" height="844"></div><figcaption><b>Tracking</b><span>From your door to the scale in Bad Oldesloe.</span></figcaption></figure>
+        <figure><div class="phone"><img src="assets/app-voucherarrived.webp" alt="" loading="lazy" width="390" height="844"></div><figcaption><b>Voucher ready</b><span>At the carrier's first scan.</span></figcaption></figure>
+        <figure><div class="phone"><img src="assets/app-wallet.webp" alt="" loading="lazy" width="390" height="844"></div><figcaption><b>Wallet</b><span>Every voucher in one place.</span></figcaption></figure>
+        <figure><div class="phone"><img src="assets/app-voucherinstore.webp" alt="" loading="lazy" width="390" height="844"></div><figcaption><b>At the checkout</b><span>Show the code, or let staff scan it.</span></figcaption></figure>
+        <figure><div class="phone"><img src="assets/app-storedetail.webp" alt="" loading="lazy" width="390" height="844"></div><figcaption><b>Store drop-off</b><span>Opening hours and directions to hand-in points.</span></figcaption></figure>
+        <figure><div class="phone"><img src="assets/app-getbag.webp" alt="" loading="lazy" width="390" height="844"></div><figcaption><b>Get a bag</b><span>Ask for one with your next order.</span></figcaption></figure>
+        <figure><div class="phone"><img src="assets/app-ownboxlabel.webp" alt="" loading="lazy" width="390" height="844"></div><figcaption><b>Your own box</b><span>A label for any box you have.</span></figcaption></figure>
+        <figure><div class="phone"><img src="assets/app-impact.webp" alt="" loading="lazy" width="390" height="844"></div><figcaption><b>Your impact</b><span>Your kilos, and water and CO₂e once their source is checked.</span></figcaption></figure>
+        <figure><div class="phone"><img src="assets/app-useofgoods.webp" alt="" loading="lazy" width="390" height="844"></div><figcaption><b>Where it went</b><span>Worn again, recycled or energy recovery, by weight.</span></figcaption></figure>
+        <figure><div class="phone"><img src="assets/app-passport.webp" alt="" loading="lazy" width="390" height="844"></div><figcaption><b>Product passport</b><span>The story behind recycled fibre.</span></figcaption></figure>
+        <figure><div class="phone"><img src="assets/app-homedark.webp" alt="" loading="lazy" width="390" height="844"></div><figcaption><b>Dark mode</b><span>Follows your phone, day and night.</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band-paper2" id="details" aria-labelledby="details-h">
+    <div class="wrap">
+      <h2 class="t-d2" id="details-h">Small things, done properly.</h2>
+      <div class="hl">
+        <div>{{i:scan}}<b>Scan works offline</b><p>The scan is saved on your phone and sent the moment you're back online.</p></div>
+        <div>{{i:globe}}<b>Deutsch and dark mode</b><p>The app follows your phone's language and appearance.</p></div>
+        <div>{{i:bell}}<b>Push that knows its place</b><p>One message per event, and nothing between 21:00 and 08:00.</p></div>
+        <div>{{i:wallet}}<b>Vouchers in your wallet</b><p>Add a voucher to Apple Wallet or Google Wallet and it's there at the checkout.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="widgets" aria-labelledby="widgets-h">
+    <div class="wrap widgets">
+      <div>
+        <h2 class="t-d2" id="widgets-h">Your bag, on the lock screen.</h2>
+        <p class="t-lead lead-gap">A Live Activity follows the bag from your door to the scale. Widgets keep your Loops and kilos in sight.</p>
+      </div>
+      <div class="wstage" aria-label="Lock screen Live Activity and two home screen widgets" role="img">
+        <div class="la">
+          <div class="la__top"><span style="display:flex;align-items:center;gap:8px">{{mark}}tcycled</span><span class="pill pill--sprout">€10 ready</span></div>
+          <div class="la__title">Your bag is on its way</div>
+          <div class="la__steps"><span class="on"></span><span class="on"></span><span></span><span></span></div>
+          <div class="la__labels"><span>Registered</span><span>On its way</span><span>Arrived</span><span>Weighed</span></div>
+        </div>
+        <div class="wsmall">
+          <div class="ws ws--ever">{{mark}}<div><span class="ws__num">3</span><span class="ws__lab">Loops</span><span class="ws__sub">€5 off recycled fibre</span></div></div>
+          <div class="ws ws--mint">{{mark}}<div><span class="ws__num">24 kg</span><span class="ws__lab">returned</span><span class="ws__sub">in 7 bags</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</section>

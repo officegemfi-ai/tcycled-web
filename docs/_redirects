@@ -1,0 +1,4 @@
+# Netlify / Cloudflare Pages
+/b/:code   /?b=:code   302
+/radio     /?q=radio   302
+/q/:code   /?q=:code   302
