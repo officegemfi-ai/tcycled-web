@@ -569,36 +569,6 @@
   mqReduce.addEventListener('change', () => living.forEach((st) => { st.stop(); if (st.visible) st.start(); }));
   showHooks.push((r, page) => $$('canvas.living[data-kind="leaf"]', page).forEach((c) => c._living.restartGrow()));
 
-  /* ---------------- hero orbit ---------------- */
-  const orbit = $('.orbit');
-  if (orbit) {
-    const items = $$('.orbit__item', orbit);
-    let raf = 0, on = false;
-    const t0 = performance.now();
-    let w = 0, h = 0, sizes = [];
-    const measure = () => { w = orbit.clientWidth; h = orbit.clientHeight; sizes = items.map((el) => el.offsetWidth); };
-    const place = (t) => {
-      if (!w) return;
-      const cx = w / 2, cy = h * 0.52, rx = w * 0.44, ry = h * 0.22, tilt = -14 * Math.PI / 180, ct = Math.cos(tilt), stl = Math.sin(tilt);
-      items.forEach((el, i) => {
-        const a = t * 0.3 + i * Math.PI * 2 / items.length + 0.4;
-        const ex = rx * Math.cos(a), ey = ry * Math.sin(a), depth = Math.sin(a), size = sizes[i];
-        el.style.setProperty('--x', (cx + ex * ct - ey * stl - size / 2).toFixed(1) + 'px');
-        el.style.setProperty('--y', (cy + ex * stl + ey * ct - size / 2).toFixed(1) + 'px');
-        el.style.setProperty('--s', (0.8 + 0.2 * (depth + 1) / 2).toFixed(3));
-        el.style.zIndex = depth > 0 ? 6 : 4;
-      });
-    };
-    const loop = (now) => { raf = 0; if (!on) return; place((now - t0) / 1000); if (!reduced() && motionOk) raf = requestAnimationFrame(loop); };
-    const wake = () => { if (on && !raf) raf = requestAnimationFrame(loop); };
-    if (document.readyState === 'complete') setTimeout(wake, 1300); else window.addEventListener('load', () => setTimeout(wake, 1300), { once: true });
-    new IntersectionObserver((en) => {
-      on = en[0].isIntersecting;
-      if (on && !raf) raf = requestAnimationFrame(loop);
-    }).observe(orbit);
-    new ResizeObserver(() => { measure(); place(reduced() ? 0 : (performance.now() - t0) / 1000); }).observe(orbit);
-  }
-
   /* ---------------- hand-drawn loop around a word ---------------- */
   function drawScribble(sp) {
     const svg = $('svg', sp);
